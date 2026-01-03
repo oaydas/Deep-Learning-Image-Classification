@@ -158,15 +158,15 @@ python train_challenge.py
 
 Generate Predictions:
 ```bash
-python predict_challenge.py --uniqname=<your_uniqname>
+python predict_challenge.py file_name
 ```
 
 This produces:
-- <your_uniqname>.csv containing float-valued predictions for the challenge images
+- file_name.csv containing float-valued predictions for the challenge images
 
 If an output format checker exists:
 ```bash
-python test_output.py <your_uniqname>.csv
+python test_output.py file_name.csv
 ```
 
 ## Checkpointing and Early Stopping
@@ -186,7 +186,3 @@ Training scripts typically generate plots per epoch for:
 - Loss
 - Accuracy
 - AUROC
-
-## License / Notes
-
-If you are publishing this publicly, ensure you have permission to distribute any included data. A safe default is to keep `data/` and `checkpoints/` out of version control via `.gitignore`.
